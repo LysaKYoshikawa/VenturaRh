@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://thymeleaf.org" xmlns: layout="http://www.ultraq.net.nz/thymeleaf/layout" >
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vagaStyly.css">
+    <title>Detalhe da Vaga</title>
+</head>
+<body class="formulario">
+
+<h1>Vaga</h1>
+
+<h3><a href="/vagas">cadastrar Vagas</a></h3>
+
+
+<div>
+
+    <div th:each="vaga : ${vaga}" >
+        <div class="row">
+            <p><h4 class="nomenclatura">Cargo:</h4><span th:text="${vaga.cargo}"></span></p>
+            <p><h4 class="nomenclatura">especializacao</h4><span th:text="${vaga.especializacao}"></span></p>
+            <p><h4 class="nomenclatura">localTrabalho</h4><span th:text="${vaga.localTrabalho}"></span></p>
+            <p><h4 class="nomenclatura">salario</h4><span th:text="${vaga.salario}"></span></p>
+        </div>
+
+        <h3><a href="/vagas">Voltar </a></h3>
+
+
+    </div>
+
+</div>
+</body>
+</html>

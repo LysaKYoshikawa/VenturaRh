@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://thymeleaf.org" xmlns: layout="http://www.ultraq.net.nz/thymeleaf/layout" >
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vagaStyly.css">
+    <title>formulario</title>
+</head>
+<body>
+
+    <h1>Lista de Vagas</h1>
+    <h3><a href="/cadastrarVaga">Cadastrar Vagas</a></h3>
+    <table class="table table-stiped">
+        <thead>
+            <tr>
+                <th>Cargo</th>
+                <th>Especialização</th>
+                <th>Salario</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="vaga : ${vagas}" >
+                <div class="row">
+
+                    <td><a th:href="${(#mvc.url('VC#detalhesVaga').arg(0, vaga.id)).build()}"><span th:text="${vaga.cargo}"></span></a></td>
+                    <td><span th:text="${vaga.especializacao}"></span></td>
+                    <td><span th:text="${vaga.salario}"></span></td>
+                    <td><a th:href="${(#mvc.url('VC#deletarVaga').arg(0, vaga.id)).build()}">DELETAR</a></td>
+                </div>
+
+        </tbody>
+
+        </div>
+
+    </table>
+
+
+</body>
+</html>
