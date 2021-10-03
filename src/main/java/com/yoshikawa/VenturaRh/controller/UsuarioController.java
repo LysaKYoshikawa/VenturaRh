@@ -1,3 +1,4 @@
+/*
 package com.yoshikawa.VenturaRh.controller;
 
 import com.yoshikawa.VenturaRh.models.usuario.Usuario;
@@ -25,5 +26,7 @@ public class UsuarioController {
     //      }
 
 }
+
+ */
 
 
